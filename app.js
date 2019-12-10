@@ -8,6 +8,7 @@ const app = express();
 const http = require('http').createServer(app);
 const io = require('socket.io')(http);
 
+const port = process.env.PORT || 3000
 
 const Message = require('./models/Message');
 
@@ -68,6 +69,6 @@ app.delete('/message/:id', async (req, res) => {
 });
 
 
-http.listen(3000, () => {
-  console.log('Server listening in 3000 port')
+http.listen(port, () => {
+  console.log(`Server listening in ${port} port`)
 })
