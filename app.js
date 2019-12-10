@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 
 //Connect to MongoDB, settings for preventing warnings
-mongoose.connect('mongodb://vadymkucher:kucher8967@ds163176.mlab.com:63176/wpbot', {
+mongoose.connect('mongodb+srv://Vadym:kucher8967@cluster0-j99vi.mongodb.net/test?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: false,
