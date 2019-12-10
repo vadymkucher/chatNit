@@ -143,7 +143,6 @@ const deleteMessage = (id) => {
 const getMessages = async () => {
   const response = await fetch('/message');
   const data = await response.json();
-  console.log(data);
   messages = data.messages.sort((a, b) => {
     a = new Date(a.createdAt);
     b = new Date(b.createdAt);
@@ -157,7 +156,6 @@ const getMessages = async () => {
 const socket = io();
 
 socket.on('message', (message) => {
-  console.log(getUser())
   if(getUser()!==" "){
     messages.push(message)
     addMessage(message)

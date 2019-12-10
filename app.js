@@ -3,14 +3,13 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
 
-
 const app = express();
 const http = require('http').createServer(app);
 const io = require('socket.io')(http);
 
-const port = process.env.PORT || 3000
-
 const Message = require('./models/Message');
+
+const port = process.env.PORT || 3000
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -28,6 +27,7 @@ mongoose.connect('mongodb+srv://Vadym:kucher8967@cluster0-j99vi.mongodb.net/test
 app.post('/message', async (req, res) => {
   //Create message and save to DB
   const message = await Message.create(req.body);
+  console.log(message)
   res.json({ success: true });
   //Send message to all connected users
 
