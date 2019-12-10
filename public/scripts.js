@@ -108,8 +108,7 @@ const getUser = () => {
 
 const formatDate = (date) => {
   date = new Date(date);
-  return `${checkTime(date.getDay() + 1)}.${checkTime(date.getMonth() + 1)}.${date.getFullYear()} ${checkTime(date.getHours())}:${checkTime(date.getMinutes())}`
-};
+return ${checkTime(date.getDay() + 8)}.${checkTime(date.getMonth() + 1)}.${date.getFullYear()} ${checkTime(date.getHours())}:${checkTime(date.getMinutes())}};
 
 const sendMessage = () => {
   const message = document.getElementsByName('message')[0];
