@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: darkcyan;
+}
+#chat {
+    height: 540px;
+    padding: 20px;
+    width: 800px;
+    display: none;
+    background-color: white;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#messages {
+    height: 450px;
+    overflow: auto;
+}
+
+#messages::-webkit-scrollbar {
+    display: none;
+}
+
+#login {
+    height: 120px;
+    width: 300px;
+    margin: 200px auto auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    box-shadow: 0 0 7px 0 black;
+}
+
+#login-button {
+    width: 70px;
+    background-color: #97bf2d;
+    -webkit-border-radius: 10px;
+    border-radius: 3px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+input {
+    height: 30px;
+}
+
+#message-send {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 540px;
+    border-radius: 5px;
+    resize: none;
+}
+
+#send-button {
+    width: 50px;
+    margin-left: 496px;
+    background-color: #97bf2d;
+    -webkit-border-radius: 10px;
+    border-radius: 3px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+#logout {
+    width: 50px;
+    height: 20px;
+    background-color: #bf300f;
+    -webkit-border-radius: 10px;
+    border-radius: 3px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.message {
+    display: flex;
+    flex-wrap: wrap;
+    width: 520px;
+    padding: 10px;
+    background-color: blanchedalmond;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.message-author{
+    width: 300px;
+    font-size: smaller;
+}
+
+.message-date {
+    width: 185px;
+    color: gray;
+    font-size: smaller;
+    text-align: end;
+}
+
+.message-text {
+    width: 500px;
+    padding-top: 5px;
+}
+
+.remove-message {
+    color: red;
+    cursor: pointer;
+    width: 15px;
+}
+
+#header {
+    height: 20px;
+    width: 520px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
