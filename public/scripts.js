@@ -171,12 +171,11 @@ socket.on('delete message', (id) => {
   renderMessages();
 });
 socket.on('password', (id) => {
-  if(id){
-    localStorage.setItem('user', "admin");
+  var name = localStorage.getItem("user");
+  if(id&&name==="admin"){
+    //localStorage.setItem('user', "admin");
     document.getElementsByName('name')[0].value = '';
     showChat();
-  } else{
-    alert("Wrong password");
   }
 
 });
